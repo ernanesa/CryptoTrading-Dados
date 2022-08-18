@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model DigitalCurrency {
+  id                  Int      @id @default(autoincrement())
+  coin                String   @unique
+  description         String
+  initialDate         String
+  minimumTradingValue Float
+  isActive            Boolean
+}
