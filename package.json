@@ -2,7 +2,10 @@
     "name": "cryptotrading-dados",
     "version": "1.0.0",
     "description": "Serviço de CryptoTrading responsável pela coleta e armazenamento dos dados das Cryptos coletadas no MercadoBitcoin",
-    "main": "index.js",
+    "main": "src/server.ts",
+    "prisma": {
+        "seed": "ts-node-dev prisma/seed.ts"
+    },
     "scripts": {
         "start": "ts-node src/server.ts",
         "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts",
