@@ -1,11 +1,8 @@
 import express from 'express'
+import routes from './Routes'
 
-class App {
-  app: any
+const app = express()
 
-  constructor() {
-    this.app = express()
-  }
-}
+app.use(routes)
 
-export default new App().app
+export default app
